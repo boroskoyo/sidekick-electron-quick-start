@@ -2,7 +2,7 @@ fix npm i issue by running:
 
 npm i react-json-view --legacy-peer-deps
 
-
+ npm install --production=false --legacy-peer-deps
 # electron-quick-start
 
 **Clone and run for a quick way to see Electron in action.**
