@@ -4,6 +4,7 @@ const http = require('http')
 const PORT = process.env.PORT || 5000
 const app = express()
 const server = http.createServer(app)
+const { onTrigger } = require('@runsidekick/sidekick-client')
 const io = socketIo(server,{ 
     cors: {
       origin: 'http://localhost:5173'
@@ -12,16 +13,33 @@ const io = socketIo(server,{
 io.on('connection',(socket)=>{
   console.log('client connected: ',socket.id)
   
-  socket.join('clock-room')
+  socket.join('stack-room')
   
   socket.on('disconnect',(reason)=>{
     console.log(reason)
   })
 })
-  
-  setInterval(()=>{
-     io.to('clock-room').emit('time', new Date())
-},1000)
+
+function ingestFunc (index) {
+  return async function (data) {
+      io.to('stack-room').emit('stack', data)
+  }
+}
+
+function ingestFuncLog (index) {
+  return async function (data) {
+      console.log(JSON.stringify({index,data}));
+  }
+}
+
+const clientInfo = {
+  sidekick_email : '', 
+  sidekick_password : '', 
+  tracepointFunction : ingestFunc('trace'),
+  logpointFunction : ingestFuncLog('log')
+}
+
+onTrigger(clientInfo);
 
 server.listen(PORT, err=> {
   if(err) console.log(err)
