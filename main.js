@@ -1,7 +1,6 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
-const isDev = require('electron-is-dev');
 
 function createWindow () {
   // Create the browser window.
@@ -16,19 +15,13 @@ function createWindow () {
   // and load the index.html of the app.
   //mainWindow.loadFile('./sidekick-explorer/index.html')
 
-  mainWindow.loadURL(
-    isDev
-      ? 'http://localhost:5173'
-      : `file://${path.join(__dirname, './sidekick-explorer/dist/index.html')}`
-  );
+  mainWindow.loadURL('http://127.0.0.1:5173');
   
   /*mainWindow.loadURL(
 'http://localhost:5173'
   );*/
   // Open the DevTools.
-  if (isDev) {
     mainWindow.webContents.openDevTools({ mode: 'detach' });
-  }
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

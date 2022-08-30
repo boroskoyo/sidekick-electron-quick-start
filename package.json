@@ -5,9 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "concurrently --kill-others \"electron .\" \"npm run start-server\" \"vite\"",
-    "dev": "concurrently --kill-others \"electron .\" \"npm run start-server\" \"npm run start-dev-client\"",
+    "dev": "concurrently --kill-others \"npm run start-server\" \"npm run start-dev-client\"",
     "start-server": "node server.js",
-    "start-dev-client": "vite",
+    "start-dev-client": "vite --host",
     "build-client": "vite build"
   },
   "repository": "https://github.com/electron/electron-quick-start",
@@ -32,6 +32,7 @@
     "@emotion/styled": "^11.10.0",
     "@mui/material": "^5.10.2",
     "@runsidekick/sidekick-client": "^0.0.2",
+    "axios": "^0.27.2",
     "concurrently": "^7.3.0",
     "electron-is-dev": "^2.0.0",
     "express": "^4.18.1",
