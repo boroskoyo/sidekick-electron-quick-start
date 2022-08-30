@@ -32,9 +32,14 @@ const App = () => {
     return () => socket.emit('end');
   }, []);
 
-  const handleClick = (e) => {
+  const activateGetEmployeesTP = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/tracepoint/55');
+    axios.post('http://localhost:5000/tracepoint/62');
+  }
+
+  const activateDelEmployeeTP = (e) => {
+    e.preventDefault();
+    axios.post('http://localhost:5000/tracepoint/202');
   }
 
   return (
@@ -43,10 +48,10 @@ const App = () => {
         <Grid item xs="6">
           <Grid container spacing={2} direction="row" >
             <Grid item xs="6">
-              <Button onClick={handleClick}>Put Tracepoint on Line 23</Button>
+              <Button variant="contained" onClick={activateGetEmployeesTP}>Put Tracepoint on Line 62 (get employees)</Button>
             </Grid>
             <Grid item xs="6">
-              <Button>button1</Button>
+              <Button variant="contained" onClick={activateDelEmployeeTP}>Put Tracepoint on Line 202 (delete employee)</Button>
             </Grid>
           </Grid>
           <List component="nav" aria-label="main mailbox folders">

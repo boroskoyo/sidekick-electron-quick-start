@@ -5,9 +5,10 @@
   "main": "main.js",
   "scripts": {
     "start": "concurrently --kill-others \"electron .\" \"npm run start-server\" \"vite\"",
+    "dev-app": "concurrently --kill-others \"electron .\" \"npm run start-server\" \"npm run start-dev-client\"",
     "dev": "concurrently --kill-others \"npm run start-server\" \"npm run start-dev-client\"",
     "start-server": "node server.js",
-    "start-dev-client": "vite --host",
+    "start-dev-client": "vite",
     "build-client": "vite build"
   },
   "repository": "https://github.com/electron/electron-quick-start",

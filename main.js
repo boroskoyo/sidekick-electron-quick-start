@@ -15,7 +15,7 @@ function createWindow () {
   // and load the index.html of the app.
   //mainWindow.loadFile('./sidekick-explorer/index.html')
 
-  mainWindow.loadURL('http://127.0.0.1:5173');
+  mainWindow.loadURL('http://localhost:5173');
   
   /*mainWindow.loadURL(
 'http://localhost:5173'
