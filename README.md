@@ -43,12 +43,12 @@ Electron
 
 
 
-####Getting Started
+#### Getting Started
 
 This tutorial consists of 2 parts. First part is a standard web application that we will live debug and the second one is our custom Sidekick control app.
 
 
-#####Prerequisites
+##### Prerequisites
 
  * Sidekick
 
@@ -59,7 +59,7 @@ Check out our  [Quick Start Guide](https://medium.com/p/efc0845a2288).
 
 
 
-#####Part-1 | Employee System (Main App)
+##### Part-1 | Employee System (Main App)
 
 
 ```bash
@@ -78,7 +78,7 @@ UI will start running at http://localhost:3000 and backend will be using the por
 - `server/index.js` - This is where we include our Sidekick agent. You can edit the agent settings according to your setup and needs.
 
 
-#####Part-2 | Control Application
+##### Part-2 | Control Application
 
 This is the application we have built to control our Sidekick agent.
 
