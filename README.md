@@ -75,7 +75,17 @@ npm run start
 
 UI will start running at http://localhost:3000 and backend will be using the port 8081
 
+<p align="center">
+  <img src="assets/tutorial1.png">
+</p>
+
 - `server/index.js` - This is where we include our Sidekick agent. You can edit the agent settings according to your setup and needs.
+
+Agent settings can be seen below:
+
+<p align="center">
+  <img src="assets/agent-settings.png">
+</p>
 
 
 ##### Part-2 | Control Application
@@ -97,18 +107,37 @@ npm run dev-app
 # You can also run the browser version - http://localhost:5173/
 npm run dev
 ```
+<p align="center">
+  <img src="assets/sidekick-explorer.png">
+</p>
 
 
 - `server.js` - Contains the main functions for putting Tracepoint.
 - `params` - This is where we prepare our params for Sidekick API requests for putting tracepoints.
+
+<p align="center">
+  <img src="assets/params.png">
+</p>
+
+
 - `filename` - Filname paramters consists of git address of the file and the commit hash.
 
 ## Usage
 After running all applications. Go to http://localhost:3000 and check out the employee app. Then use the put tracepoint buttons on the Electron app to put tracepoints on the running application.
 
-1- Visit the home page and capture stack related to employee list endpoint.
-2- Delete an employee to collect related data.
-3- Check out Electron app to see your collected events.
+#### Tracepoint Locations:
+
+<p align="center">
+  <img src="assets/first-tp.png">
+</p>
+
+<p align="center">
+  <img src="assets/second-tp.png">
+</p>
+
+- Visit the home page and capture stack related to employee list endpoint.
+- Delete an employee to collect related data.
+- Check out Electron app to see your collected events.
 
 You can than further edit those apps to explore Sidekick Client's features.
 
