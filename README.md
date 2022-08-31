@@ -33,6 +33,10 @@
 
 This project aims to show how you can develop a custom application to control your Sidekick agents using Sidekick Node.js Client.
 
+<p align="center">
+    <img src="assets/tutorial.gif" alt="sidekick explorer">
+</p>
+
 #### Built With
 
 React
