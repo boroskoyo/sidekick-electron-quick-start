@@ -39,11 +39,11 @@ This project aims to show how you can develop a custom application to control yo
 
 #### Built With
 
-React
-[Express](https://expressjs.com/)
-Socket.io
-Electron
-[Sidekick Node.js Client](https://www.npmjs.com/package/@runsidekick/sidekick-client)
+- React
+- [Express](https://expressjs.com/)
+- Socket.io
+- Electron
+- [Sidekick Node.js Client](https://www.npmjs.com/package/@runsidekick/sidekick-client)
 
 
 
