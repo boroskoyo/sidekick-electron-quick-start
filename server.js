@@ -56,10 +56,6 @@ const apiInfo = {
   authToken: "my-token",
 };
 
-onTrigger(clientInfo);
-
-const apiClient = new SidekickApi(apiInfo, "http://localhost:8084");
-
 const clientInfo = {
   sidekick_host: "ws://127.0.0.1",
   sidekick_port: "7777",
@@ -67,6 +63,10 @@ const clientInfo = {
   tracepointFunction: ingestFunc("trace"),
   logpointFunction: ingestFuncLog("log"),
 };
+
+onTrigger(clientInfo);
+
+const apiClient = new SidekickApi(apiInfo, "http://localhost:8084");
 
 app.post("/tracepoint/:id", (req, res) => {
   apiClient.putTracepoints(params(req.params.id));
